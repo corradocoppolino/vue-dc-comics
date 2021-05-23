@@ -10,35 +10,8 @@
       
             <div class="list">
                 <ul>
-                    <li>
-                        <a href="#">characters</a>
-                    </li>
-                    <li>
-                        <a href="#">comics</a>
-                    </li>
-                    <li>
-                        <a href="#">movies</a>
-                    </li>
-                    <li>
-                        <a href="#">tv</a>
-                    </li>
-                    <li>
-                        <a href="#">games</a>
-                    </li>
-                    <li>
-                        <a href="#">collectibles</a>
-                    </li>
-                    <li>
-                        <a href="#">videos</a>
-                    </li>
-                    <li>
-                        <a href="#">fans</a>
-                    </li>
-                    <li>
-                        <a href="#">news</a>
-                    </li>
-                    <li>
-                        <a href="#">shop</a>
+                    <li v-for="(element,index) in links" :key="index">
+                        <a :href="element.ulr"> {{element.text}} </a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +23,62 @@
 
 <script>
 export default {
-
+    data(){
+        return{
+            links:[
+                {
+                    ulr: '#',
+                    text: 'characters',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'comics',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'movies',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'tv',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'games',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'collectibles',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'videos',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'fans',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'news',
+                    active: false
+                },
+                {
+                    ulr: '#',
+                    text: 'shop',
+                    active: false
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -58,6 +86,7 @@ export default {
 
     header{
         height: 100px;
+        min-width: 1200px;
     }
 
     .container{
@@ -80,11 +109,11 @@ export default {
                 list-style: none;
                 li{
                     display: inline;
-                    margin-left: 20px;
+                    margin-left: 15px;
                     a{
                         text-decoration: none;
                         text-transform: uppercase;
-                        font-size: 15px;
+                        font-size: 13px;
                         color: #464646;
                     }
                 }

@@ -40,6 +40,7 @@ export default {
     div{
         width: 100%;
         height: 150px;
+        min-width: 1200px;
         background-color: #1882F9;
         display: flex;
         align-items: center;

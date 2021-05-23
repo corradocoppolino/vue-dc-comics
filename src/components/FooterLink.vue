@@ -84,6 +84,7 @@ export default {
         height: 400px;
         background-image: url(../assets/footer-bg.jpg);
         display: flex;
+        min-width: 1200px;
         .logo{
                 background-image: url(../assets/dc-logo-bg.png);
                 height: 400px;
